@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <img src="1.jpg" alt="" id="image-container">
+        <div class="nav">
+            <img src="1.jpg" alt=""  onclick="change_img(this)">
+            <img src="2.jpg" alt=""  onclick="change_img(this)">
+            <img src="3.jpg" alt=""  onclick="change_img(this)">
+        </div>
+        <div class="price">$80</div>
+        <div class="product-info">
+            <div class="name">Sanglassses</div>
+            <div class="dis">Awsome Men Sa</div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    var container = document.getElementById("image-container")
+    console.log(container)
+    function change_img(image){
+        // console.log(image.src)
+        // console.log(container.src)
+        container.src = image.src;
+    }
+
+</script>
+
+</html>

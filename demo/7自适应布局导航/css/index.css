@@ -1,0 +1,102 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.services-section {
+    background:#333;
+    background-size: cover;
+    /* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。 */
+    padding:60px 0;
+}
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    padding:0 20px;
+    overflow: hidden;
+}
+.section-title {
+    text-align: center;
+    color:#ddd;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+.border {
+    width:160px;
+    height: 2px;
+    background-color: #82ccdd;
+    margin:40px auto;
+}
+
+
+.services-container {
+    display: flex;
+    flex-wrap:wrap;
+    /* flex-wrap 属性规定flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。。 */
+    justify-content: center;
+}
+
+.service-box {
+    max-width: 33.33%;
+    padding:10px;
+    text-align:center;
+    color:#ddd;
+    cursor: pointer;
+}
+
+.service-icon {
+    display: inline-block;
+    width:70px;
+    height: 70px;
+    border:3px solid #82ccdd;
+    color:#82ccdd;
+    transform: rotate(45deg);
+    /* 将方框翻转45 */
+    margin-top:16px;
+    margin-bottom: 30px;
+    transition:0.3s linear;
+
+}
+
+.service-icon i {
+    line-height: 70px;
+    transform: rotate(-45deg); 
+    /* 小图标翻过来 */
+    font-size: 26px;
+}
+
+.service-box:hover .service-icon {
+    background-color: #82ccdd;
+    color: #ddd;
+}
+
+.service-title {
+    font-size:18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    font-size:14px;
+}
+
+
+
+@media screen and (max-width:960px) {
+    .service-box {
+        max-width:45%;
+    }
+}
+@media screen and (max-width:768px) {
+    .service-box {
+        max-width:50%;
+    }
+}
+@media screen and (max-width:480px) {
+    .service-box {
+        max-width:100%;
+    }
+}

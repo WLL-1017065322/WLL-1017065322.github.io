@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    background-color: #000;
+}
+/* .con {
+    justify-self: center;
+    align-self: center;
+} */
+
+.container {
+    justify-self: center;
+    align-self: center;
+    color: #fff;
+
+    font-family: fira code;
+    font-size: 6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    position: relative;
+    /* animation: tik-tok 0.5s linear infinite; */
+
+}
+
+.container::before, .container::after {
+    content: attr(data-content);
+    /* CSS的 content CSS 属性用于在元素的  
+    ::before 和 ::after 伪元素中插入内容。
+    使用content 属性插入的内容都是匿名的可替换元素。
+    将元素的X属性以字符串形式返回。如果该元素没有 X 属性，则返回一个空字符串。
+    区分大小写的属性返回值依赖文挡的语言设定。 */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* color: aqua; */
+    z-index: -1;
+
+}
+
+.container::before {
+    
+    color:#03A9f4;
+    animation: tik-tok 0.5s linear infinite;
+    animation-delay: 0.2s;
+    /* top: 20rem; */
+    
+}
+
+.container::after {
+    /* top: -20rem; */
+    color: #e91e63;
+    
+    animation: tik-tok 0.5s linear infinite;
+}
+
+@keyframes tik-tok {
+    0%{
+        left: -6px;
+        top: -6px;
+    }
+    25%{
+        left: -3px;
+        top: -3px;
+    }
+    50%{
+        left: 3px;
+        top: 0px;
+    }
+    75%{
+        left: 3px;
+        top: 0px;
+    }
+    100%{
+        left: 3px;
+        top: 0px;
+    }
+}

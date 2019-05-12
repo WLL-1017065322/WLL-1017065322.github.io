@@ -1,0 +1,79 @@
+.gallery-section {
+    width: 100%;
+    padding: 60px 0;
+    background: #f1f1f1;
+}
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.gallery-section h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    /* 这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。
+    如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确
+    定哪些字母要大写，这取决于用户代理如何识别出各个“词”。 
+    定义仅有大写字母*/
+}
+
+.border {
+    width: 180px;
+    height: 4px;
+    background-color: #333;
+    margin: 60px auto;
+}
+
+.gallery-section .gallery {
+    display: flex;
+    /* Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
+
+任何一个容器都可以指定为 Flex 布局。============================== */
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.gallery-section .image {
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+    /* cursor 属性规定要显示的光标的类型（形状）。 */
+}
+
+.gallery .image img {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    /* CSS transitions 提供了一种在更改CSS属性时控制动画速度的方法。 
+    其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。
+    比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，
+    使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，
+    按照一定的曲线速率变化。这个过程可以自定义。 */
+}
+
+.gallery-section .image:hover img {
+    transform: scale(1.4) rotate(15deg);
+}
+
+
+@media screen and (max-width:960px) {
+    .gallery-section .image {
+        flex:33.33%;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .gallery-section .image {
+        flex:50%;
+    }
+}
+@media screen and (max-width:760px) {
+    .gallery-section .image {
+        flex:100%;
+    }
+}

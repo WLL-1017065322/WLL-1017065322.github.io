@@ -1,0 +1,613 @@
+/* .section:nth-child(1){
+    background-color: aqua;
+
+}
+
+.section:nth-child(2){
+    background-color: red;
+
+}
+
+.section:nth-child(3){
+    background-color: yellowgreen;
+
+}
+
+.section:nth-child(4){
+    background-color: greenyellow;
+
+}
+
+.section:nth-child(5){
+    background-color: orange;
+
+}
+
+ */
+
+/* 第一页布局 */
+.sectionA {
+  background-color: #041527;
+  height: 100%;
+}
+
+/* 区域一的后代元素是布局 ======================================*/
+/* 插件会自己加一个div */
+
+.sectionA > div {
+  position: relative;
+}
+.sectionA > div > .bg {
+  width: 1200px;
+  height: 732px;
+  background: url("../images/first_bg.png") no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
+}
+
+.sectionA > div > .word1 {
+  width: 718px;
+  height: 190px;
+  background: url("../images/first_word01.png") no-repeat center;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -400px;
+}
+
+.sectionA > div > .word2 {
+  width: 718px;
+  height: 190px;
+  background: url("../images/first_word02.png") no-repeat center;
+  position: absolute;
+  top: 260px;
+  left: 57%;
+  margin-left: -400px;
+}
+.sectionA > div > .word3 {
+  width: 810px;
+  height: 82px;
+  background: url("../images/first_word03.png") no-repeat center;
+  position: absolute;
+  top: 415px;
+  left: 50%;
+  margin-left: -405px;
+}
+
+/* 旋转的圈 */
+.sectionA > div > .web {
+  width: 214px;
+  height: 214px;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+}
+
+.sectionA > div > .web > .circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/first_web.png");
+
+  /* 添加动画 */
+  animation: sectionA-circle 2s linear infinite;
+}
+
+.sectionA > div > .web p {
+  font-size: 45px;
+  font-weight: 900;
+  position: absolute;
+  left: 59px;
+}
+/* 一直旋转的动画 */
+@keyframes sectionA-circle {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 区域2 ================================================*/
+
+.sectionB {
+  height: 100%;
+  background-color: #041527;
+}
+
+.sectionB > div > .title {
+    
+  width: 860px;
+  height: 140px;
+  margin: 0 auto;
+  background: url("../images/hd_bg.png") no-repeat bottom left;
+}
+
+.sectionB > div > .title > h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 4px solid white;
+}
+
+/* 区域2的学员区域 */
+.sectionB > div > .student {
+    display: flex;
+    justify-content: space-around;
+    padding-top:20px;
+
+}
+.sectionB > div > .student > li {
+}
+.sectionB > div > .student > li > div {
+
+    width: 269px;
+    height: 353px;
+    background:url('../images/box1_bg.jpg')no-repeat;
+}
+.sectionB > div > .student > li > div > h3 {
+    color: skyblue;
+    font-size: 26px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.sectionB > div > .student > li > div > p {
+    font-size: 18px; 
+    color: white;
+    padding-left:20px;
+    margin: 0;
+}
+.sectionB > div > .student > li > h3 {
+    color: goldenrod;
+    text-align:center;
+    font-size: 24px;
+    margin: 0;
+}
+/* 照片下方的内容 */
+.sectionB > div > .student > li > p {
+    font-size:12px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+/* 鼠标经过手抖 */
+.sectionB > div > .student > li > div:hover{
+    background: url('../images/box1_bg4.gif')no-repeat center;
+}
+
+
+/* 区域3 ================================================*/
+
+.sectionC {
+  /* background-color: yellowgreen; */
+  background: url('../images/third_bg.jpg')no-repeat center/cover;
+}
+
+/* 标题区域 */
+
+.sectionC > div > .title {
+    
+    width: 860px;
+    height: 140px;
+    margin: 0 auto;
+    background: url("../images/hd_bg.png") no-repeat bottom left;
+  }
+  
+  .sectionC > div > .title > h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 4px solid white;
+  }
+
+
+  /* 中间区域的布局 */
+
+.sectionC>div>.inner{
+    height: 354px;
+    background: url('../images/thrid_inner.png')no-repeat center;
+    margin-top:100px;
+    position: relative;
+
+}
+.sectionC>div>.inner>.list{
+    /* padding-top: 15px; */
+
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.sectionC>div>.inner>.list>li{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+   
+    /* padding: 0 150px; */
+
+    
+     
+}
+.sectionC>div>.inner>.list>li>a{
+    width: 182px;
+    height: 28px;
+    padding: 20px;
+    display: block;
+    background:url('../images/list1.png')no-repeat center, #03effc;
+}
+
+/* 课程部分 */
+.sectionC>div>.inner>.lessons{
+    width: 555px;
+    height: 276px;
+    position: absolute;
+    left:50%;
+    margin-left: -277.5px;
+    /* background-color: hotpink; */
+    /* top:40px; */
+    top:10%;
+}
+
+.sectionC>div>.inner>.lessons>li{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(1){
+    background:url('../images/list_con1.png')no-repeat center;
+}
+.sectionC>div>.inner>.lessons>li:nth-child(2){
+    background:url('../images/list_con2.png')no-repeat center;
+}
+.sectionC>div>.inner>.lessons>li:nth-child(3){
+    background:url('../images/list_con3.png')no-repeat center;
+}
+.sectionC>div>.inner>.lessons>li:nth-child(4){
+    background:url('../images/list_con4.png')no-repeat center;
+}
+.sectionC>div>.inner>.lessons>li:nth-child(5){
+    background:url('../images/list_con5.png')no-repeat center;
+}
+.sectionC>div>.inner>.lessons>li:nth-child(6){
+    background:url('../images/list_con6.png')no-repeat center;
+}
+
+/* li标签的高亮 */
+
+/* .sectionC>div>.inner>.list>li>a:hover{
+    background-color: yellow;
+
+} */
+
+.sectionC>div>.inner>.list>li>a.active{
+    background-color: yellow;
+}
+
+/* 区域4 ================================================*/
+.sectionD {
+  background-color: #e4ebe9;
+}
+/* 头部 */
+.sectionD>div{}
+.sectionD>div>.title{
+    height: 140px;
+    width: 860px;
+    margin: 0 auto;
+    background: url('../images/hd_bg01.png')no-repeat bottom left;
+}
+.sectionD>div>.title>h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 60px;
+    color:#009199;
+    border-bottom: 4px solid #05b5bf;
+    padding: 10px;
+}
+
+/* 主体信息 */
+
+.sectionD>div>.fsbanner{
+    width: 960px;
+    height: 600px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top:20px;
+    border-radius: 20px;
+    /* background-color: skyblue; */
+
+    flex:1;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sectionD>div>.fsbanner>div{
+    width: 760px;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    position: absolute;
+    display: flex;
+    justify:space-around;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 40px;
+    /* 添加过度效果 */
+
+    transition: all 0.5s;
+}
+
+.sectionD>div>.fsbanner>div>.info{
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+
+}
+
+.sectionD>div>.fsbanner>div{
+    text-align: center;
+
+}
+.sectionD>div>.fsbanner>div:nth-child(1) {
+    background-color: orange;
+    left:0;
+}
+
+.sectionD>div>.fsbanner>div:nth-child(2) {
+    background-color: wheat;
+    left:160px;
+}
+.sectionD>div>.fsbanner>div:nth-child(3) {
+    background-color: darkolivegreen;
+    flex-direction: column;
+    left:320px;
+}
+.sectionD>div>.fsbanner>div:nth-child(3)>.info {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.sectionD>div>.fsbanner>div:nth-child(3)>.info>h4 {
+    margin: 0;
+}
+
+
+
+.sectionD>div>.fsbanner>div:nth-child(4) {
+    background-color: gainsboro;
+    /* left:480px; */
+}
+.sectionD>div>.fsbanner>div:nth-child(5) {
+    background-color: lightgreen;
+    /* left:640px; */
+}
+.sectionD>div>.fsbanner>div:nth-child(6) {
+    background-color: #05B5BF;
+    /* left:800px; */
+}
+.sectionD>div>.fsbanner>div:nth-child(7) {
+    background-color: hotpink;
+    /* left:800px; */
+}
+
+
+
+/* 区域5 ================================================*/
+
+
+/* 头部 */
+.sectionE {
+    height: 100%;
+    background-color: #e4ebe9;
+    background: url('../images/fifth_bg.jpg') no-repeat center/cover;
+}
+
+.sectionE>div>.title {
+    height: 140px;
+    width: 960px;
+    margin: 0 auto;
+    background: url('../images/hd_bg.png')no-repeat bottom left;
+}
+
+.sectionE>div>.title>h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 60px;
+    color:white;
+    border-bottom: 4px solid white;
+    padding: 10px;
+}
+
+
+.sectionE>div>.info {
+    width: 1090px;
+    margin: 20px auto;
+
+}
+
+
+.sectionE>div>.info>.info-title{
+    height: 64px;
+    background: url('../images/fifth_tit.png')no-repeat center;
+}
+
+
+
+.sectionE>div>.info>.info-table{
+    height: 233.3333333px;
+    background: url('../images/fifth_table.png') no-repeat;
+    animation: scroll 10s infinite;
+    
+}
+
+@keyframes scroll {
+    20%{
+        background-position-y:-46.6px; 
+    }
+    40%{
+        background-position-y:-93.2px; 
+    }
+    60%{
+        background-position-y:-139.8px;
+    }
+    80%{
+        background-position-y:-186.4px;
+    }
+    100%{
+        background-position-y:-233.3px;
+    }
+}
+
+
+
+/* 入场动画 */
+.section>div{
+    overflow: hidden;
+}
+/* 防止超出还可以设置透明度 */
+
+/* a */
+
+.sectionA>div>.bg{
+    
+    transform: translateY(100%);
+    opacity: 0;
+    /* 更改透明度使背景动画跟家平滑 */
+}
+.sectionA>div>.word1{
+    transform: translateX(-300%);
+}
+.sectionA>div>.word2{
+    transform: translateX(300%);
+    
+}
+
+.sectionA.animation>div>.bg{
+    transition: all .5s;
+    transform: none;
+    opacity: 1;
+    
+}
+.sectionA.animation>div>.word1{
+    transition: all .5s .2s;
+    transform: none;
+}
+.sectionA.animation>div>.word2{
+    transition: all .5s  .2s;
+    transform: none;
+    
+}
+
+
+/* b */
+
+.sectionB>div>.title {
+    transform: translateY(-500%);
+}
+
+.sectionB>div>.student li {
+    transform: translateY(200%);
+}
+
+
+.sectionB.animation>div>.title {
+    transition: all .5s;
+    transform: none;
+}
+
+.sectionB.animation>div>.student li {
+    transform: none;
+}
+
+.sectionB.animation>div>.student li:nth-child(1){
+    transition: all .5s .5s;
+    
+}
+
+.sectionB.animation>div>.student li:nth-child(2){
+    transition: all .5s .7s;
+    
+}
+
+.sectionB.animation>div>.student li:nth-child(3){
+    transition: all .5s .9s;
+    
+}
+
+.sectionB.animation>div>.student li:nth-child(4){
+    transition: all .5s 1.1s;
+    
+}
+
+
+
+/* c */
+
+.sectionC>div>.title{
+    transform: translateY(-300%);
+    opacity: 0;
+
+}
+
+.sectionC>div>.inner{
+    transform: translateY(300%);
+    opacity: 0;
+
+}
+
+.sectionC.animation>div>.title{
+    transition: all .5s;
+    transform: none;
+    opacity: 1;
+
+}
+
+.sectionC.animation>div>.inner{
+    transition: all .5s;
+    transform: none;
+    opacity: 1;
+
+}
+
+/* d */
+
+.sectionD>div>.title{
+    transform: translateY(-300%);
+    opacity: 0;
+
+}
+
+
+.sectionD.animation>div>.title{
+    transition: all .5s;
+    transform: none;
+    opacity: 1;
+
+}
+
+
+/* e */
+.sectionE>div>.title{
+    transform: translateY(-300%);
+    opacity: 0;
+
+}
+
+
+.sectionE.animation>div>.title{
+    transition: all .5s;
+    transform: none;
+    opacity: 1;
+
+}

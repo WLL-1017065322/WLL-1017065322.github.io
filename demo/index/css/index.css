@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #eee;
+    display: flex;
+   justify-content: center;
+}
+
+
+.side-nav {
+    width: 95%;
+    height: 60px;
+    /* background-color: #111111; */
+    border-radius: 0 0 15px 15px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    /* CSS justify-content 属性定义了浏览器如何分配顺着父容器主轴的弹性元素之间及其周围的空间。 */
+    align-items: stretch;
+    /* 	
+    默认值。元素被拉伸以适应容器。
+
+    如果指定侧轴大小的属性值为'auto'，
+    则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，
+    但同时会遵照'min/max-width/height'属性的限制。 */
+    /*
+    目前，Flexbox和CSS网格布局支持此属性。在Flexbox中，它控制十字轴上项目的对齐方式，在网格布局中，它控制块轴上项目的对齐方式。 
+    弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。 */
+    transition: 0.4s;
+}
+
+.btn {
+    flex-grow: 1;
+    /* 
+    flex-grow 属性用于设置或检索弹性盒子的扩展比率。
+    flex-grow伸缩-扩展基数 */
+    display: flex;
+    /* 在弹性盒对象的 <div> 元素中的各项周围留有空白： */
+    align-items: center;
+    justify-content: center;
+    /* 项目位于容器的中心。 */
+}
+
+.side-nav a {
+    /* color:#82ccdd; */
+    /* text-decoration: none; */
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.side-nav a:hover {
+    text-decoration: underline;
+    font-size: 20px;
+}
